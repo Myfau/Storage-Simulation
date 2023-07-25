@@ -1,3 +1,5 @@
+#This script generates set of traning data for decision tree learning
+
 import random
 import csv
 

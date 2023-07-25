@@ -8,5 +8,3 @@ Repostitory for artificial intelligence project.
 * Michał Góralczyk
 * Adam Skowronek
 * Adam Kaczmarek
-* Mikhail Ronchyk
-* Łukasz Bielejewski

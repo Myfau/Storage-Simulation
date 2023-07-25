@@ -4,7 +4,7 @@ from os import path
 from settings import *
 from sprites import *
 import decision_tree as dt
-from functions import *
+#from functions import *
 import joblib
 
 # Żeby program działał poprawnie wymagane są biblioteki:
@@ -126,7 +126,7 @@ class Game:
                     self.cart.put_down()
                 if event.key == pg.K_TAB:    
                     self.cart.move_cart_by_movelist()
-                if event.key == pg.K_s:    
+                if event.key == pg.K_s:
                     for current_box in self.boxes:
                         if self.tree == None:
                             print ('Error: no decision tree found')
@@ -146,25 +146,9 @@ class Game:
                     print("Decision tree learned!")
                     joblib.dump(self.tree, 'tree_utils/tree_model')
 
-                
-                if event.key == pg.K_g:
-                    # details = detail_info()
-                    # if not details:
-                    #     continue
-                    data = ['dang', 'radi', 'norm', 'frag', 'flam']
-
-        
-    def show_start_screen(self):
-        pass
-
-    def show_go_screen(self):
-        pass
-
 # create the game object
 g = Game()
-g.show_start_screen()
 
 while True:
     g.new()
     g.run()
-    g.show_go_screen()
